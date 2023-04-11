@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from "../../assets/imagenes/logo.png"
 import CartWidget from "./CartWidget"
 
@@ -10,7 +11,7 @@ const NavBar = () => {
         </div>
         <div className="links">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><Link to='/'>Inicio</Link></li>
                 <li>
                   <a href="">Productos</a>
                   <ul>
