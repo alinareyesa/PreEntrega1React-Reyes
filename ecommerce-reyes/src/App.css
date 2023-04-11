@@ -105,10 +105,8 @@
   width: auto;
   height: auto;
   color: #f772b7;
-  background-color: #fee3ec;
   font-family: signika, sans-serif;
   position: absolute;
-  left: 20px;
 }
 
 .card-productos{
@@ -118,7 +116,7 @@
   align-items: center;
   flex-direction: column;
   margin: 40px;
-  height: 340px;
+  height: 360px;
   background-color: white;
 
 }
@@ -135,14 +133,14 @@
 
 .img-productos {
   width: 240px;
-  
+  margin-top: 6px;
 }
 
 .item-detail-container{
-  height: 350px;
+  height: 360px;
   width: 300px;
   position: relative;
-  background-color: #fee3ec;
+  background-color: white;
   top: 150px;
   display: flex;
   flex-direction: column;
@@ -154,6 +152,7 @@
 
 .item-detail-img{
   width: 250px;
+  margin-top: 10px;
 }
 
 .item-detail-container h3{
@@ -164,4 +163,10 @@
 .item-detail-container p{
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+.contador{
+  background-color: aqua;
+  width: 300px;
+  height: 300px;
 }
