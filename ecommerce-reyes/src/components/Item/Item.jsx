@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 
-const Item = ({producto}) => {
+const Item = ({product}) => {
     return(
-        <div className="card-productos">
-        <img className="img-productos" src={producto.foto}/>
-        <h3>{producto.nombre}</h3>
-        <p>${producto.precio}</p>
-        <Link to={`/detail/${producto.id}`}>
-         <button>Detalle</button>
+        <div className="card-products">
+        <img className="img-products" src={product.image}/>
+        <h3>{product.name}</h3>
+        <p>${product.price}</p>
+        <Link to={`/detail/${product.id}`}>
+         <button>Comprar</button>
         </Link>
     </div>
     )
