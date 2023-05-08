@@ -4,7 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { Link, useParams } from "react-router-dom"
 import Loading from "../Loading/Loading"
 import { doc, getDoc, getFirestore } from "firebase/firestore"
-import NotFound from "../../NotFoundContainer/NotFound"
+import NotFound from "../NotFoundContainer/NotFound"
 
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState({})
