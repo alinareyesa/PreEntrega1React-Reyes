@@ -13,10 +13,10 @@ const ItemDetail = ({products}) => {
         setQuantity(true)
     }
     return(<div className="item-detail-container">{ isQuantity ?
-            <>
+            <div className="item-detail-redirect">
                 <Link to="/cart"><button>Finalizar compra</button></Link>
                 <Link to="/"><button>Seguir comprando</button></Link>
-            </>
+            </div>
         :
 
          <>

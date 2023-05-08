@@ -169,7 +169,7 @@ body{
   height: 400px;
   width: 1000px;
   position: relative;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.591);
   padding: 20px;
   top: 50px;
   display: grid;
@@ -178,6 +178,8 @@ body{
   justify-content: space-around;
   color: #f772b7;
   font-family: 'Nunito Sans', sans-serif;
+  border-color: #f772b7;
+  border-style: solid;
 }
 
 .item-detail-img{
@@ -195,16 +197,63 @@ body{
 .item-detail-container p{
   font-size: 30px;
   grid-column: 2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.count button{
+  margin-top: 10px;
+  height: 25px;
+  margin-right: 5px;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 15px;
+  color: #f772b7;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  padding-bottom: 30px;
+  border: none;
+  background-color: #fee3ec;
+}
+
+.count button:hover{
+  background-color: #ffcadc;
+}
+
+.item-detail-redirect{
+  grid-column: 1 / span 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-detail-redirect button{
+  margin-top: 10px;
   height: 40px;
+  margin-right: 5px;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 25px;
+  color: #f772b7;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  padding-bottom: 40px;
+  border: none;
+  background-color: #fee3ec;
+}
+
+.item-detail-redirect button:hover{
+  background-color: #ffcadc;
 }
 
 .count{
-  color: #f772b7;
   grid-column: 2;
 }
 
 .loading{
-  margin-top: 200px;
+  margin-top: 80px;
+  margin-left: 300px;
   width: 500px;
   justify-content: center;
   align-items: center;
@@ -217,42 +266,99 @@ body{
 
 .loading h2{
   color: #ff97b1;
-  font-family: signika, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 45px;
 }
 
 .cart-container{
-  margin-top: 150px;
-  margin-left: 80px;
-  display: grid;
-  grid-template-columns: auto auto;
+  margin-top: 120px;
+  margin-left: 10px;
+  width: 1200px;
   padding: 10px;
+  align-items: start;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .cart-product-list{
-  grid-column: 1;
-  background-color: white;
+  display: grid;
+  grid-column: auto auto auto;
+  background-color: rgba(255, 255, 255, 0.591);
   padding: 20px;
 }
 
-.cart-container img{
-  width: 250px;
+.cart-product-list img{
+  grid-column: 1;
+  width: 180px;
+  margin: 20px;
+}
+
+.cart-product-list p{
+  grid-column: 2;
+  padding: 20px;
+  font-size: 25px;
+  color: #f772b7;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.cart-product-list button{
+  grid-column: 3;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+  border-radius: 10px;
+  padding: 4px;
+  font-size: 20px;
+  color: #f772b7;
+  font-weight: bold;
+  padding-bottom: 25px;
+  border: none;
+  background-color: #fee3ec;
+  justify-self: end;
+}
+
+.cart-product-list button:hover{
+  background-color: #ffcadc;
 }
 
 .final-price-div{
-  grid-column: 2;
-  margin: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.591);
   padding: 20px;
-  width: 250px;
+  width: 1180px;
   color: #f772b7;
   font-size: 30px;
-  font-family: sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.final-price-div button{
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 4px;
+  font-size: 20px;
+  color: #f772b7;
+  font-weight: bold;
+  padding-bottom: 25px;
+  border: none;
+  background-color: #fee3ec;
+}
+
+.final-price-div button:hover{
+  background-color: #ffcadc;
+}
+
+.final-price-div input{
+  height: 30px;
+  margin-left: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+  border-color: #ff97b1;
+  border-radius: 4px;
 }
 
 .cart-empty-div{
   margin-top: 150px;
-  font-family: sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #f772b7;
   font-size: 30px;
   display: flex;
@@ -264,10 +370,34 @@ body{
 .cart-empty-div button{
   height: 50px;
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 25px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+  color: #f772b7;
   background-color: #fdd5e7;
-  font-family: sans-serif;
-  padding: 8px;
+  padding: 10px;
   border-radius: 10px;
-  border-color: #fdd5e7;
+  border: none;
 }
+.cart-empty-div button:hover{
+  background-color: #ffc1dd;
+}
+
+.id-order{
+  margin-top: 50px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #f772b7;
+  background-color: rgba(255, 255, 255, 0.591);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.not-found{
+  margin-top: 50px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #f772b7;
+  background-color: rgba(255, 255, 255, 0.591);
+  padding: 20px;
+  border-radius: 5px;
+}
+
