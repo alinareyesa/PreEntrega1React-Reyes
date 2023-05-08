@@ -28,7 +28,7 @@ https://git-scm.com/downloads
 
 Luego se debe instalar el proyecto e iniciarlo de esta forma:
 
-$ git clone https://example.com
+$ git clone https://github.com/alinareyesa/PreEntrega1React-Reyes.git
 $ cd ../path/to/the/file
 $ npm install
 $ npm start
