@@ -8,7 +8,7 @@ Este Ecommerce fue creado usando varias herramientas
 - HTML
 - CSS
 - Javascript
-- React JS
+- React JS [6.10.0]
 
 Con una base de datos simulada desde firebase
 
