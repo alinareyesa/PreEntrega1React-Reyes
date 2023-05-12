@@ -2,7 +2,7 @@
 
 En este proyecto se dessarrolló un ecommerce con la capacidad de crear un carrito con los articulos deseados y enviar un formulario con los datos necesarios para crear una orden de compra, la cual se enviara a una base de datos.
 
-##DEMO
+## DEMO
 https://dreaminchuchustoreuy.netlify.app/
 
 ## Tecnologias Utilizadas
