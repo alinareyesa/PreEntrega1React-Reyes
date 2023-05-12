@@ -1,4 +1,4 @@
-import carritoicon from "../../assets/imagenes/carritoicon.png"
+import carritoicon from "../../../public/images/carritoicon.png"
 import { useCartContext } from "../../context/cartContext"
 
 const CartWidget = () => {

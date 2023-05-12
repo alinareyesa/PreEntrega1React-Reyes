@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import logo from "../../assets/imagenes/logo.png"
+import logo from "../../../public/images/logo.png"
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
@@ -7,7 +7,7 @@ const NavBar = () => {
         <div>
                 <nav className="navbar">
         <div className="logo">
-            <img src={logo}/>
+            <Link to="/"><img src={logo}/></Link>
         </div>
         <div className="links">
             <ul>
@@ -19,8 +19,8 @@ const NavBar = () => {
                     <li><Link to='/categoria/headband'>Headbands</Link></li>
                   </ul>
                 </li>
-                <li><a href="">Comprar</a></li>
-                <li><a href="">Info</a></li>
+                <li><Link to='/comprar'>Comprar</Link></li>
+                <li><Link to='/info'>Info</Link></li>
               </ul>
         </div>
         <Link to='/cart'><CartWidget /></Link>

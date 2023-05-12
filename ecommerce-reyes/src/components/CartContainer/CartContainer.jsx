@@ -8,7 +8,8 @@ const CartContainer = () => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
-        email: ''
+        email: '',
+        repeatedEmail: '',
     })
     const {cartList, emptyCart, finalPrice, deleteProduct} = useCartContext()
 
@@ -23,8 +24,11 @@ const CartContainer = () => {
             total: finalPrice()
         }
 
+        if(order.buyer.email != order.buyer.repeatedEmail){
+            alert("Los email deben coincidir")
+            return
+        }
         const db = getFirestore()
-
         const queryCollection = collection(db, 'orders')
         addDoc(queryCollection, order)
         .then(resp => setId(resp.id))
@@ -58,7 +62,9 @@ const CartContainer = () => {
                 {cartList.map(products =>(
                     <div className="cart-product-list" key={products.id}>
                         <img src={products.image}/>
-                        <p>{products.name} x{products.quantity} ${products.price}</p>
+                        <p className="cart-product-list-name">{products.name}</p>
+                        <p className="cart-product-list-quantity">x{products.quantity}</p> 
+                        <p className="cart-product-list-price">${products.price}</p>
                         <button onClick={() => deleteProduct(products.id)} >X</button>
                     </div>
                 ))}
@@ -88,10 +94,10 @@ const CartContainer = () => {
                         />
                         <input 
                             type="text"
-                            name="repetirMail"
+                            name="repeatedEmail"
                             placeholder="Repita el email"
                             onChange={handleOnChange}
-                            value={formData.email}
+                            value={formData.repeatedEmail}
                         />
                           <button type='submit'>Realizar compra</button>
                     </form>

@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
             .finally(()=> setIsLoading(false))
     }, [])
 
-    if (products.name == undefined) {
+    if (products.name == undefined && !isLoading) {
         return (<NotFound/>)
     } else {
         return(

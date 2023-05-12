@@ -10,6 +10,15 @@ body{
   width: max-content;
 }
 
+.app{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar {
   background-color: #fdd5e7;
   width: 100%;
@@ -19,6 +28,7 @@ body{
   height: 100px;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 
 .logo {
@@ -110,7 +120,8 @@ body{
 }
 
 .item-list-container {
-  top: 100px;
+  height: 100%;
+  padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -169,22 +180,19 @@ body{
   height: 400px;
   width: 1000px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.591);
-  padding: 20px;
-  top: 50px;
+  background-color: white;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
   justify-content: space-around;
   color: #f772b7;
   font-family: 'Nunito Sans', sans-serif;
-  border-color: #f772b7;
-  border-style: solid;
 }
 
 .item-detail-img{
   width: 350px;
-  margin-top: 10px;
+  padding-top: 25px;
   grid-column: 1;
 }
 
@@ -192,6 +200,7 @@ body{
   font-size: 40px;
   grid-column: 2;
   margin-bottom: 15px;
+  padding-top: 25px;
 }
 
 .item-detail-container p{
@@ -281,8 +290,8 @@ body{
 
 .cart-product-list{
   display: grid;
-  grid-column: auto auto auto;
-  background-color: rgba(255, 255, 255, 0.591);
+  grid-column: auto auto auto auto auto;
+  background-color: white;
   padding: 20px;
 }
 
@@ -293,7 +302,6 @@ body{
 }
 
 .cart-product-list p{
-  grid-column: 2;
   padding: 20px;
   font-size: 25px;
   color: #f772b7;
@@ -301,9 +309,21 @@ body{
   font-weight: bold;
 }
 
-.cart-product-list button{
+.cart-product-list-name{
+  grid-column: 2;
+}
+
+.cart-product-list-quantity{
   grid-column: 3;
-  margin-top: 20px;
+}
+
+.cart-product-list-price{
+  grid-column: 4;
+}
+
+.cart-product-list button{
+  grid-column: 5;
+  margin-top: 40px;
   width: 30px;
   height: 20px;
   border-radius: 10px;
@@ -314,7 +334,6 @@ body{
   padding-bottom: 25px;
   border: none;
   background-color: #fee3ec;
-  justify-self: end;
 }
 
 .cart-product-list button:hover{
@@ -322,7 +341,7 @@ body{
 }
 
 .final-price-div{
-  background-color: rgba(255, 255, 255, 0.591);
+  background-color: white;
   padding: 20px;
   width: 1180px;
   color: #f772b7;
@@ -384,7 +403,11 @@ body{
 }
 
 .id-order{
-  margin-top: 50px;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Nunito Sans', sans-serif;
   color: #f772b7;
   background-color: rgba(255, 255, 255, 0.591);
@@ -399,5 +422,36 @@ body{
   background-color: rgba(255, 255, 255, 0.591);
   padding: 20px;
   border-radius: 5px;
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  margin-top: 60px;
+  position: relative;
+  background-color: #fdd5e7;
+  color: #f772b7;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-container{
+  color: #f772b7;
+  font-family: 'Nunito Sans', sans-serif;
+  padding-top: 120px;
+  padding-left: 10px;
+}
+
+.info-container h2{
+  font-size: 32px;
+  padding: 10px;
+}
+
+.info-container p{
+  padding: 10px;
+  font-size: 20px;
 }
 
